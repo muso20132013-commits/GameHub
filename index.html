@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Happy Arcade</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Game Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div>
+            <div class="sidebar-header">
+                <h3>🎮 Game Hub</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" data-page="home"><span>🏠 Home</span></a></li>
+                <li><a href="#" class="nav-link" data-page="tic-tac-toe"><span>#️⃣ Tic-Tac-Toe</span></a></li>
+                <li><a href="#" class="nav-link" data-page="rps"><span>🗿 R-P-S</span></a></li>
+                <li><a href="#" class="nav-link" data-page="guess-the-number"><span>🔢 Guess Number</span></a></li>
+                <li><a href="#" class="nav-link" data-page="whac-a-mole"><span>🔨 Whac-a-Mole</span></a></li>
+                <li><a href="#" class="nav-link" data-page="memory-match"><span>🧠 Memory Match</span></a></li>
+                <li><a href="#" class="nav-link" data-page="clicker-game"><span>🖱️ Clicker Game</span></a></li>
+                <li><a href="#" class="nav-link" data-page="hangman"><span>🪓 Hangman</span></a></li>
+                <li><a href="#" class="nav-link" data-page="typing-test"><span>⌨️ Typing Test</span></a></li>
+                <li><a href="#" class="nav-link" data-page="magic-8-ball"><span>🎱 Magic 8-Ball</span></a></li>
+                <li><a href="#" class="nav-link" data-page="reaction-time"><span>⚡ Reaction Time</span></a></li>
+                <li><a href="#" class="nav-link" data-page="connect-four"><span>🔵 Connect Four</span></a></li>
+                <li><a href="#" class="nav-link" data-page="simon-says"><span>Simon Says</span></a></li>
+            </ul>
+        </div>
+        
+        <div class="theme-switcher">
+            <span>☀️</span>
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+            <span>🌙</span>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        
+        <section id="home" class="page active">
+            <h1>Welcome to your Game Hub!</h1>
+            <p>Select a game from the sidebar. Your theme preference is saved!</p>
+            <div class="widget-container">
+                <div class="widget clock-widget">
+                    <h3>Current Time</h3>
+                    <div id="clock">12:00:00 PM</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tic-tac-toe" class="page">
+            <h1>Tic-Tac-Toe</h1>
+            <div class="game-container">
+                <h2 id="ttt-status" class="game-status">Player X's turn</h2>
+                <div id="ttt-board" class="game-board">
+                    <div class="ttt-cell cell" data-index="0"></div>
+                    <div class="ttt-cell cell" data-index="1"></div>
+                    <div class="ttt-cell cell" data-index="2"></div>
+                    <div class="ttt-cell cell" data-index="3"></div>
+                    <div class="ttt-cell cell" data-index="4"></div>
+                    <div class="ttt-cell cell" data-index="5"></div>
+                    <div class="ttt-cell cell" data-index="6"></div>
+                    <div class="ttt-cell cell" data-index="7"></div>
+                    <div class="ttt-cell cell" data-index="8"></div>
+                </div>
+                <button id="ttt-reset" class="btn">Reset Game</button>
+            </div>
+        </section>
+
+        <section id="rps" class="page">
+            <h1>Rock, Paper, Scissors</h1>
+            <div class="game-container">
+                <h3>Choose your weapon:</h3>
+                <div id="rps-choices" class="btn-group">
+                    <button class="btn rps-btn" data-choice="rock">🗿 Rock</button>
+                    <button class="btn rps-btn" data-choice="paper">📄 Paper</button>
+                    <button class="btn rps-btn" data-choice="scissors">✂️ Scissors</button>
+                </div>
+                <div id="rps-result" class="game-status">
+                    <p>Make your move!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="guess-the-number" class="page">
+            <h1>Guess the Number</h1>
+            <div class="game-container">
+                <p>I'm thinking of a number between 1 and 100.</p>
+                <input type="number" id="gtn-input" class="game-input" placeholder="Enter your guess">
+                <button id="gtn-btn" class="btn">Guess</button>
+                <p id="gtn-status" class="game-status">Good luck!</p>
+            </div>
+        </section>
+
+        <section id="whac-a-mole" class="page">
+            <h1>Whac-a-Mole</h1>
+            <div class="game-container">
+                <h2 class="game-status">Score: <span id="wam-score">0</span></h2>
+                <button id="wam-start" class="btn">Start Game (15s)</button>
+                <div id="wam-board" class="game-board wam-board">
+                    <div class="wam-hole"><div class="wam-mole"></div></div>
+                    <div class="wam-hole"><div class="wam-mole"></div></div>
+                    <div class="wam-hole"><div class="wam-mole"></div></div>
+                    <div class="wam-hole"><div class="wam-mole"></div></div>
+                    <div class="wam-hole"><div class="wam-mole"></div></div>
+                    <div class="wam-hole"><div class="wam-mole"></div></div>
+                    <div class="wam-hole"><div class="wam-mole"></div></div>
+                    <div class="wam-hole"><div class="wam-mole"></div></div>
+                    <div class="wam-hole"><div class="wam-mole"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="memory-match" class="page">
+            <h1>Memory Match</h1>
+            <div class="game-container">
+                <h2 id="mm-status" class="game-status">Moves: 0</h2>
+                <div id="mm-board" class="game-board mm-board">
+                    </div>
+                <button id="mm-reset" class="btn">Reset Game</button>
+            </div>
+        </section>
+
+        <section id="clicker-game" class="page">
+            <h1>Clicker Game</h1>
+            <div class="game-container">
+                <h2 class="game-status">Time Left: <span id="cg-time">10</span>s</h2>
+                <h3 class="game-status">Score: <span id="cg-score">0</span></h3>
+                <button id="cg-start" class="btn">Start Game</button>
+                <button id="cg-clicker" class="btn clicker-btn" disabled>Click Me!</button>
+                <p id="cg-result" class="game-status"></p>
+            </div>
+        </section>
+        
+        <section id="hangman" class="page">
+            <h1>Hangman</h1>
+            <div class="game-container hangman-container">
+                <h2 id="hm-status" class="game-status">Guess the word!</h2>
+                <h3 id="hm-lives" class="game-status">Lives: 6</h3>
+                <div id="hm-word" class="hangman-word"></div>
+                <div id="hm-letters" class="hangman-letters">
+                    </div>
+                <button id="hm-reset" class="btn">New Word</button>
+            </div>
+        </section>
+        
+        <section id="typing-test" class="page">
+            <h1>Typing Test</h1>
+            <div class="game-container">
+                <div id="tt-text-display" class="typing-text-display"></div>
+                <textarea id="tt-input" class="game-input typing-input" rows="5" placeholder="Start typing here..."></textarea>
+                <div id="tt-stats" class="game-status">
+                    Time: <span id="tt-time">0</span>s | WPM: <span id="tt-wpm">0</span>
+                </div>
+                <button id="tt-reset" class="btn">Restart Test</button>
+            </div>
+        </section>
+
+        <section id="magic-8-ball" class="page">
+            <h1>Magic 8-Ball</h1>
+            <div class="game-container m8-container">
+                <p>Ask a Yes/No question, then click the 8-ball.</p>
+                <div id="m8-ball" class="magic-8-ball">
+                    <div id="m8-answer" class="magic-8-answer">8</div>
+                </div>
+                <input type="text" id="m8-question" class="game-input" placeholder="Type your question here...">
+                <button id="m8-ask" class="btn">Get Answer</button>
+            </div>
+        </section>
+        
+        <section id="reaction-time" class="page">
+            <h1>Reaction Time Test</h1>
+            <div class="game-container rt-container">
+                <h2 id="rt-status" class="game-status">Click the button to start.</h2>
+                <button id="rt-start" class="btn">Start</button>
+                <div id="rt-target" class="reaction-target">Click me!</div>
+            </div>
+        </section>
+
+        <section id="connect-four" class="page">
+            <h1>Connect Four</h1>
+            <div class="game-container">
+                <h2 id="c4-status" class="game-status">Player 🔴's turn</h2>
+                <div id="c4-board" class="game-board c4-board">
+                    </div>
+                <button id="c4-reset" class="btn">Reset Game</button>
+            </div>
+        </section>
+
+        <section id="simon-says" class="page">
+            <h1>Simon Says</h1>
+            <div class="game-container">
+                <h2 id="ss-status" class="game-status">Press Start to Play</h2>
+                <h3>Score: <span id="ss-score">0</span></h3>
+                <div class="simon-btn-container">
+                    <div class="simon-btn green" data-color="green"></div>
+                    <div class="simon-btn red" data-color="red"></div>
+                    <div class="simon-btn yellow" data-color="yellow"></div>
+                    <div class="simon-btn blue" data-color="blue"></div>
+                </div>
+                <button id="ss-start" class="btn">Start</button>
+            </div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
