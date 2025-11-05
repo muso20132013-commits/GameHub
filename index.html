@@ -28,6 +28,7 @@
                 <li><a href="#" class="nav-link" data-page="reaction-time"><span>⚡ Reaction Time</span></a></li>
                 <li><a href="#" class="nav-link" data-page="connect-four"><span>🔵 Connect Four</span></a></li>
                 <li><a href="#" class="nav-link" data-page="simon-says"><span>Simon Says</span></a></li>
+                <li><a href="#" class="nav-link" data-page="snake"><span>🐍 Snake</span></a></li>
             </ul>
         </div>
         
@@ -131,52 +132,7 @@
             <h1>Clicker Game</h1>
             <div class="game-container">
                 <h2 class="game-status">Time Left: <span id="cg-time">10</span>s</h2>
-                <h3 class="game-status">Score: <span id="cg-score">0</span></h3>
-                <button id="cg-start" class="btn">Start Game</button>
-                <button id="cg-clicker" class="btn clicker-btn" disabled>Click Me!</button>
-                <p id="cg-result" class="game-status"></p>
-            </div>
-        </section>
-        
-        <section id="hangman" class="page">
-            <h1>Hangman</h1>
-            <div class="game-container hangman-container">
-                <h2 id="hm-status" class="game-status">Guess the word!</h2>
-                <h3 id="hm-lives" class="game-status">Lives: 6</h3>
-                <div id="hm-word" class="hangman-word"></div>
-                <div id="hm-letters" class="hangman-letters">
-                    </div>
-                <button id="hm-reset" class="btn">New Word</button>
-            </div>
-        </section>
-        
-        <section id="typing-test" class="page">
-            <h1>Typing Test</h1>
-            <div class="game-container">
-                <div id="tt-text-display" class="typing-text-display"></div>
-                <textarea id="tt-input" class="game-input typing-input" rows="5" placeholder="Start typing here..."></textarea>
-                <div id="tt-stats" class="game-status">
-                    Time: <span id="tt-time">0</span>s | WPM: <span id="tt-wpm">0</span>
-                </div>
-                <button id="tt-reset" class="btn">Restart Test</button>
-            </div>
-        </section>
-
-        <section id="magic-8-ball" class="page">
-            <h1>Magic 8-Ball</h1>
-            <div class="game-container m8-container">
-                <p>Ask a Yes/No question, then click the 8-ball.</p>
-                <div id="m8-ball" class="magic-8-ball">
-                    <div id="m8-answer" class="magic-8-answer">8</div>
-                </div>
-                <input type="text" id="m8-question" class="game-input" placeholder="Type your question here...">
-                <button id="m8-ask" class="btn">Get Answer</button>
-            </div>
-        </section>
-        
-        <section id="reaction-time" class="page">
-            <h1>Reaction Time Test</h1>
-            <div class="game-container rt-container">
+                <h3 class_container">
                 <h2 id="rt-status" class="game-status">Click the button to start.</h2>
                 <button id="rt-start" class="btn">Start</button>
                 <div id="rt-target" class="reaction-target">Click me!</div>
@@ -205,6 +161,18 @@
                     <div class="simon-btn blue" data-color="blue"></div>
                 </div>
                 <button id="ss-start" class="btn">Start</button>
+            </div>
+        </section>
+
+        <section id="snake" class="page">
+            <h1>Snake</h1>
+            <div class="game-container">
+                <h2 class="game-status">Score: <span id="snake-score">0</span></h2>
+                <div id="snake-board-container">
+                    <canvas id="snake-board" width="400" height="400"></canvas>
+                </div>
+                <button id="snake-start" class="btn">Start Game</button>
+                <p id="snake-status" class="game-status">Use Arrow Keys to move.</p>
             </div>
         </section>
 
