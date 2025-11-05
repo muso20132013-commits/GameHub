@@ -533,3 +533,23 @@ input:checked + .slider:before {
 .simon-btn.red { background-color: #ff4757; }
 .simon-btn.yellow { background-color: #f1c40f; }
 .simon-btn.blue { background-color: #007bff; }
+
+/* --- Snake --- */
+#snake-board-container {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#snake-board {
+    background-color: var(--bg-primary);
+    border: 2px solid var(--color-accent1);
+}
+
+#snake-status {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    text-align: center;
+    margin-top: 1rem;
+}
