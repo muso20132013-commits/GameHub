@@ -132,7 +132,49 @@
             <h1>Clicker Game</h1>
             <div class="game-container">
                 <h2 class="game-status">Time Left: <span id="cg-time">10</span>s</h2>
-                <h3 class_container">
+                <h3 class="game-status">Score: <span id="cg-score">0</span></h3>
+                <button id="cg-start" class="btn">Start Game</button>
+                <button id="cg-clicker" class="btn clicker-btn" disabled>CLICK ME!</button>
+                <p id="cg-result" class="game-status"></p>
+            </div>
+        </section>
+
+        <section id="hangman" class="page">
+            <h1>Hangman</h1>
+            <div class="game-container hangman-container">
+                <h2 id="hm-status" class="game-status"></h2>
+                <h3 id="hm-lives" class="game-status"></h3>
+                <div id="hm-word" class="hangman-word"></div>
+                <div id="hm-letters" class="hangman-letters"></div>
+                <button id="hm-reset" class="btn">New Word</button>
+            </div>
+        </section>
+
+        <section id="typing-test" class="page">
+            <h1>Typing Test</h1>
+            <div class="game-container">
+                <h2 class="game-status">Time: <span id="tt-time">0</span>s | WPM: <span id="tt-wpm">0</span></h2>
+                <div id="tt-text-display" class="typing-text-display"></div>
+                <textarea id="tt-input" class="game-input typing-input" placeholder="Start typing here..." rows="4"></textarea>
+                <button id="tt-reset" class="btn">Reset Test</button>
+            </div>
+        </section>
+
+        <section id="magic-8-ball" class="page">
+            <h1>Magic 8-Ball</h1>
+            <div class="game-container m8-container">
+                <p>Ask the 8-ball a question and click to get an answer.</p>
+                <input type="text" id="m8-question" class="game-input" placeholder="Ask a question (e.g., Will I be rich?)">
+                <div id="m8-ball" class="magic-8-ball">
+                    <div id="m8-answer" class="magic-8-answer">8</div>
+                </div>
+                <button id="m8-ask" class="btn">Ask the 8-Ball</button>
+            </div>
+        </section>
+
+        <section id="reaction-time" class="page">
+            <h1>Reaction Time Test</h1>
+            <div class="game-container rt-container">
                 <h2 id="rt-status" class="game-status">Click the button to start.</h2>
                 <button id="rt-start" class="btn">Start</button>
                 <div id="rt-target" class="reaction-target">Click me!</div>
