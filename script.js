@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (document.body.classList.contains('light-mode')) {
             localStorage.setItem('theme', 'light');
         } else {
-            localStorage.setItem('theme', 'dark');
+            // Dark mode: remove the item so the initial check defaults to dark mode
             localStorage.removeItem('theme');
         }
     });
@@ -704,7 +704,8 @@ document.addEventListener('DOMContentLoaded', () => {
         function snake_init() {
             clearInterval(snake_gameLoop);
             snake_snake = [ { x: 10, y: 10 } ]; // Start in the middle
-            snake_direction = { x: 0, y: 0 };
+            // FIX: Start moving right immediately
+            snake_direction = { x: 1, y: 0 }; 
             snake_score = 0;
             snake_scoreEl.textContent = 0;
             snake_status.textContent = "Use Arrow Keys to move.";
